@@ -1,14 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimonSays" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +22,91 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cba-vn-Ggd">
+                                <rect key="frame" x="0.0" y="55" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LzQ-iN-75X">
+                                <rect key="frame" x="164" y="127" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ApF-vy-wL7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZX-OA-CWK">
+                                <rect key="frame" x="191.5" y="325" width="167.5" height="167"/>
+                                <state key="normal" title="Button" image="top-right"/>
+                                <connections>
+                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vCi-oP-OA5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qM2-TJ-Udd">
+                                <rect key="frame" x="191.5" y="500" width="167.5" height="167"/>
+                                <state key="normal" image="bottom-right"/>
+                                <connections>
+                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MO6-zb-wHb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRq-l5-tEt">
+                                <rect key="frame" x="16" y="500" width="167.5" height="167"/>
+                                <state key="normal" title="Button" image="bottom-left"/>
+                                <connections>
+                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qKH-tf-ei0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HE-aP-1xZ">
+                                <rect key="frame" x="16" y="325" width="167.5" height="167.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2HE-aP-1xZ" secondAttribute="height" multiplier="1:1" id="Re4-N0-GBT"/>
+                                </constraints>
+                                <state key="normal" image="top-left"/>
+                                <connections>
+                                    <action selector="tapAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eth-P2-ybR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IRq-l5-tEt" firstAttribute="top" secondItem="2HE-aP-1xZ" secondAttribute="bottom" constant="8" id="2P4-jz-rwb"/>
+                            <constraint firstItem="2HE-aP-1xZ" firstAttribute="height" secondItem="IRq-l5-tEt" secondAttribute="height" id="3Wv-nD-BsO"/>
+                            <constraint firstItem="2HE-aP-1xZ" firstAttribute="width" secondItem="IRq-l5-tEt" secondAttribute="width" id="5OW-8L-9qk"/>
+                            <constraint firstItem="2HE-aP-1xZ" firstAttribute="height" secondItem="JZX-OA-CWK" secondAttribute="height" id="6K4-Qs-7Oy"/>
+                            <constraint firstItem="IRq-l5-tEt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Pn-f3-Kka"/>
+                            <constraint firstItem="2HE-aP-1xZ" firstAttribute="width" secondItem="JZX-OA-CWK" secondAttribute="width" id="6sh-Q6-02X"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IRq-l5-tEt" secondAttribute="bottom" id="78b-QT-Xfn"/>
+                            <constraint firstItem="2HE-aP-1xZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8H4-K5-T8z"/>
+                            <constraint firstItem="qM2-TJ-Udd" firstAttribute="top" secondItem="JZX-OA-CWK" secondAttribute="bottom" constant="8" id="8sB-eD-aAC"/>
+                            <constraint firstItem="JZX-OA-CWK" firstAttribute="leading" secondItem="2HE-aP-1xZ" secondAttribute="trailing" constant="8" id="Bg0-Ee-vwU"/>
+                            <constraint firstItem="qM2-TJ-Udd" firstAttribute="leading" secondItem="IRq-l5-tEt" secondAttribute="trailing" constant="8" id="OF8-S6-B5d"/>
+                            <constraint firstItem="2HE-aP-1xZ" firstAttribute="width" secondItem="qM2-TJ-Udd" secondAttribute="width" id="UVc-er-ivd"/>
+                            <constraint firstItem="2HE-aP-1xZ" firstAttribute="height" secondItem="qM2-TJ-Udd" secondAttribute="height" id="hAO-ro-e1n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qM2-TJ-Udd" secondAttribute="bottom" id="olY-W0-Vam"/>
+                            <constraint firstItem="qM2-TJ-Udd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="tLB-Rh-zsV"/>
+                            <constraint firstItem="JZX-OA-CWK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xsk-DM-RJE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomLeftButton" destination="IRq-l5-tEt" id="trU-CC-H1y"/>
+                        <outlet property="bottomRightButton" destination="qM2-TJ-Udd" id="Mvn-Qs-HCX"/>
+                        <outlet property="scoreLabel" destination="cba-vn-Ggd" id="wu8-6a-Jva"/>
+                        <outlet property="topLeftButton" destination="2HE-aP-1xZ" id="UKh-1r-4DI"/>
+                        <outlet property="topRightButton" destination="JZX-OA-CWK" id="imX-WU-cRl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="134.48275862068968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bottom-left" width="400" height="380"/>
+        <image name="bottom-right" width="380" height="370"/>
+        <image name="top-left" width="388" height="364"/>
+        <image name="top-right" width="382" height="382"/>
+    </resources>
 </document>
